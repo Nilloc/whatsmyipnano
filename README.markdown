@@ -1,1 +1,1 @@
-This is a simple example of using Sinatra on Heroku. Check it out at [http://whatsmyip.heroku.com](http://whatsmyip.heroku.com).
+This is a simple example of using Sinatra on Heroku. Check it out at [http://whatsmyipnano.heroku.com](http://whatsmyipnano.heroku.com).
