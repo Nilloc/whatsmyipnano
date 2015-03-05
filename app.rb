@@ -7,7 +7,7 @@ set :haml, { :format => :html5 }
 get '/' do
   @ip = request.env['HTTP_X_FORWARDED_FOR'] #.split(',').first
   
-  @appDate = File.mtime(File.join('public', 'iStat-nano.wdgt.zip'))
+  @appDate = File.mtime(File.join('public', 'iStat nano.wdgt.zip'))
   puts @appDate
   
   # puts request.env
