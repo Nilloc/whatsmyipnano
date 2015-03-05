@@ -11,7 +11,7 @@ function showElement(id) {
 }
 
 function checkForUpdate(mode) {
-	url='http://islayer.com/index.php?op=version&id=21&type=1&random='+new Date().getTime();
+	url='http://whatsmyipnano.herokuapp/update?d='+new Date().getTime();
 	versionCheckRequest=new XMLHttpRequest();
 	versionCheckRequest.open("GET",url,true);
 	versionCheckRequest.onreadystatechange=function() {
