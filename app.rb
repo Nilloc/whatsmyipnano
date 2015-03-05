@@ -19,3 +19,8 @@ get '/ip' do
   # puts request.env
   haml :ip
 end
+
+get '/update' do
+  # Some stuff to display the latest version number... which I'm not interested in supporting yet.
+  redirect to('/')
+end
