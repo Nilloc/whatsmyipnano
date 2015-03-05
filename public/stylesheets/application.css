@@ -1,3 +1,3 @@
-html, body { background: #ddd; font-family: Georgia, Times, serif; }
-h1 { color: #777; font-size: 15px; letter-spacing: 2px; margin: 50px 0 0 0; text-align: center; text-transform: uppercase; }
+html, body { background: #ddd; font-family: "Lucida Console", Monaco, monospace; }
+h1 { color: #777; font-size: 2em; margin: 50px 0 0 0; text-align: center; text-transform: uppercase; }
 h1 > em { color: #005; display: block; font-size: 72px; font-style: normal; }
