@@ -11,27 +11,27 @@ function selectTab(tab) {
 		return;	
 
 	if(selectedTab == 0)
-		 tab_image0.src = "./images/back/tabs_general.png"
+		 tab_image0.src = "./images/back/tabs_general.png";
 	else if(selectedTab == 1)	
-		 tab_image1.src = "./images/back/tabs_sections.png"
-	else if(selectedTab == 2)	
-		 tab_image2.src = "./images/back/tabs_updates.png"
+		 tab_image1.src = "./images/back/tabs_sections.png";
+  // else if(selectedTab == 2)  
+     // tab_image2.src = "./images/back/tabs_updates.png";
 
 	selectedTab = tab;
 
 	if(tab == 0){
 		 tab_general.style.display = 'block';
 		 tab_sections.style.display = 'none';
-		 tab_update.style.display = 'none';
+     // tab_update.style.display = 'none';
 	} else if(tab == 1){
 		 tab_general.style.display = 'none';
 		 tab_sections.style.display = 'block';
-		 tab_update.style.display = 'none';
-	} else if(tab == 2){
-		 tab_general.style.display = 'none';
-		 tab_sections.style.display = 'none';
-		 tab_update.style.display = 'block';
-	}
+     // tab_update.style.display = 'none';
+	} // else if(tab == 2){
+	//      tab_general.style.display = 'none';
+	//      tab_sections.style.display = 'none';
+	//      tab_update.style.display = 'block';
+	//   }
 }
 
 var backside = false;
@@ -39,8 +39,8 @@ var backside = false;
 var flipShown = false;
 
 function doneMouseUp(event){
-	hideElement(document.getElementById("updateWindowNew"))
-	hideElement(document.getElementById("updateWindowCurrent"))
+	hideElement(document.getElementById("updateWindowNew"));
+	hideElement(document.getElementById("updateWindowCurrent"));
 	hideModeSelectorWithoutAnimation();	
 	var front = document.getElementById("front");
 	var back = document.getElementById("behind");
@@ -218,8 +218,8 @@ function checkIfIntelModuleInstalled() {
 }
 
 function showbackside(event){
-	hideElement(document.getElementById("updateWindowNew"))
-	hideElement(document.getElementById("updateWindowCurrent"))
+	hideElement(document.getElementById("updateWindowNew"));
+	hideElement(document.getElementById("updateWindowCurrent"));
 	onhide();
 
 	if(!widget.preferenceForKey("bar_mode"))
@@ -333,31 +333,31 @@ function showbackside(event){
 		case "blue":
 			skinMenuText.innerHTML = "Blue";
 			skinMenu.selectedIndex = 0;
-		break	
+		break;
 		case "graphite":
 			skinMenuText.innerHTML = "Graphite";
 			skinMenu.selectedIndex = 1;
-		break	
+		break;
 		case "green":
 			skinMenuText.innerHTML = "Green";
 			skinMenu.selectedIndex = 2;
-		break	
+		break;
 		case "grey":
 			skinMenuText.innerHTML = "Grey";
 			skinMenu.selectedIndex = 3;
-		break	
+		break;
 		case "pink":
 			skinMenuText.innerHTML = "Pink";
 			skinMenu.selectedIndex = 4;
-		break
+		break;
 		case "putty":
 			skinMenuText.innerHTML = "Putty";
 			skinMenu.selectedIndex = 5;
-		break
+		break;
 		case "red":
 			skinMenuText.innerHTML = "Red";
 			skinMenu.selectedIndex = 6;
-		break
+		break;
 	}
 	
 	setup_smart_timer_menu();
@@ -384,19 +384,19 @@ function setup_smart_timer_menu() {
 		case "0":
 			document.getElementById("smartTimerMenuText").innerHTML = "Off";
 			document.getElementById("smartTimerMenu").selectedIndex = 0;
-		break	
+		break;
 		case "1":
 			document.getElementById("smartTimerMenuText").innerHTML = "5 mins";
 			document.getElementById("smartTimerMenu").selectedIndex = 1;
-		break	
+		break;
 		case "2":
 			document.getElementById("smartTimerMenuText").innerHTML = "15 mins";
 			document.getElementById("smartTimerMenu").selectedIndex = 2;
-		break	
+		break;
 		case "3":
 			document.getElementById("smartTimerMenuText").innerHTML = "60 mins";
 			document.getElementById("smartTimerMenu").selectedIndex = 3;
-		break	
+		break;
 	}
 }
 
@@ -408,18 +408,18 @@ function changeSmartTimer(newTimer) {
 	switch(widget.preferenceForKey("smart_timer")){
 		case "1":
 			smart_timer = setInterval("updateSMART()",300000);
-		break	
+		break;
 		case "2":
 			smart_timer = setInterval("updateSMART()",900000);
-		break	
+		break;
 		case "3":
 			smart_timer = setInterval("updateSMART()",3600000);
-		break	
+		break;
 	}
 	
 	if(widget.preferenceForKey("smart_timer") != '0')
-		iStatNano.setShouldMonitorSMARTTemps(1)
+		iStatNano.setShouldMonitorSMARTTemps(1);
 	else
-		iStatNano.setShouldMonitorSMARTTemps(0)
+		iStatNano.setShouldMonitorSMARTTemps(0);
 	alert('timer = ' + smart_timer);
 }
