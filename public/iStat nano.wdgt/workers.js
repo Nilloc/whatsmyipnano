@@ -246,7 +246,7 @@ function updateNetwork() {
 
 function getExtIP(){
   // url='http://whatsmyip.islayer.com/?random='+new Date().getTime();
-	url='http://whatsmyipnano.herokuapp.com/?random='+new Date().getTime();
+	url='http://whatsmyipnano.herokuapp.com/ip?random='+new Date().getTime();
 	xmlhttp = new XMLHttpRequest();
 	xmlhttp.open("GET",url,true);
 	xmlhttp.onreadystatechange=function() {
