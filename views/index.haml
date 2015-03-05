@@ -8,9 +8,13 @@
     %link{:rel => "stylesheet", :type => "text/css", :href => "/stylesheets/application.css"}/
     
   %body
-    %h1
-      %a{:href => "/ip"}= @ip
-    
     %h2
-      %a{:href => "download"} Download the updated Nano Widget
-      %sup (for OS X 10.4+)
+      What's my IP Nano
+    %h3
+      %a{:href => "/ip"}= @ip
+    %p
+      %a{:href => "iStat nano.wdgt.zip"} Download Nano Widget
+      %sup 
+        (for OS X 10.4+)
+        updated
+        = @appDate.strftime("%Y/%m/%d at %I:%M%p")
